@@ -1,19 +1,23 @@
 module.exports = {
   calcTax: function ( taxable ) {
 
-
-
     if( taxable < 10 ){
 
-    taxes = taxable * .10;
+    taxes = taxable * 0.10;
 
-  } else if ( 10 < taxable < 20){
+  } else if( taxable < 20 ){
 
-    var m = (10 * .10) + (taxable - 10) * .07;
+    var m = (10 * 0.10) + (taxable - 10) * 0.07;
 
     taxes = Math.round(m * 100) / 100;
 
+  } else if( taxable < 30 ){
+
+    var mn = (10 * 0.10) + (10 * 0.07) + (taxable - 20) * 0.05;
+
+    taxes = Math.round(mn * 100) / 100;
+
   }
-    return taxes;
+      return taxes;
   }
 }
