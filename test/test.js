@@ -21,7 +21,7 @@ describe('Tax Calculator', function(){
   it('should tax 3% on anything after $30', function(){
     expect(code.calcTax(35)).to.equal(2.35);
     expect(code.calcTax(39)).to.equal(2.47);
-    expect(code.calcTax(109)).to.equal(4.75);
+    expect(code.calcTax(109)).to.equal(4.57);
   });
 
 });

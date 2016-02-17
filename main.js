@@ -17,6 +17,12 @@ module.exports = {
 
     taxes = Math.round(mn * 100) / 100;
 
+  } else if( taxable > 30 ){
+
+    var mny = (10 * 0.10) + (10 * 0.07) + (10 * 0.05) + (taxable - 30) * 0.03;
+
+    taxes = Math.round(mny * 100) / 100;
+
   }
       return taxes;
   }
