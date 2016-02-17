@@ -1,7 +1,9 @@
 module.exports = {
   calcTax: function ( taxable ) {
 
-    return taxable * .10;
+    taxes = taxable * .10;
+
+    return taxes;
 
   }
 }
